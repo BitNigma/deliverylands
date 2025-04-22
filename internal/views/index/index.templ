@@ -1,0 +1,208 @@
+package index
+
+
+import "delivery/internal/views/components"
+import "delivery/internal/views/content"
+import "github.com/gofiber/fiber/v2"
+
+
+templ MainPage(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2c", "main", c)
+    @content.IndexPage()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ AboutPage(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2c", "about", c)
+    @content.About()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+templ ContactsPage(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2c", "contacts", c)
+    @content.ContactsContent()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ TermsPage(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2c", "terms", c)
+    @content.TermsContent()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ PrivacyHanle(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2c", "privacy",c)
+    @content.PrivacyPage()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ SecurityHanle(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2c", "security", c)
+    @content.SecurityPolicy()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+
+templ FraudHanle(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2c", "fraud", c)
+    @content.FraudPolicy()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+
+templ WalletPage(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2c", "wallet", c)
+    @content.Wallet()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+templ ExchangePage(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2c", "exchange",c)
+    @content.Exchange()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ B2BPage(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2b", "b2b",c)
+    @content.B2BContent()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ PaymentPage(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2b", "payments",c )
+    @content.PayementContent()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ APIHandle(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2b", "api", c)
+    @content.APIContent()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ HandleCompliance(c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2b", "compl", c)
+    @content.ComplainceContent()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+templ HandleLogin(err string, c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("", "compl", c)
+    @content.Login(err)
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ HandleSignUP(err string, c *fiber.Ctx){
+    <html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("", "compl", c)
+    @content.Signup(err)
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+templ HandleDash(){
+    <html lang="en">
+   <body>
+    @content.Dash()
+    </body>
+    </html>
+}

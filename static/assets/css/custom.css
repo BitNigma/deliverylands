@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/*!
+ * Bootstrap v4.5.3 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+
+.my-active {
+    color: #000 !important;
+    border-bottom:1px solid #377dff !important;
+}
+
+.my-button {
+    padding-left: 20px;
+}
+
+
+@media only screen and (max-width: 375px) {
+  
+    .mobile {
+        padding-top: 0px !important;
+        margin-top: 4.5rem !important;
+    }
+    .nonpadding {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+    .logo {
+        height:40px !important;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .my-button {
+        display: none;
+
+    }
+
+}
+
+
+@media only screen and (max-width: 762px) {
+
+    .mobile {
+        padding-top: 0px !important;
+        margin-top: 4.5rem !important;
+    }
+
+    .nonpadding {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+    .logo {
+        height:40px !important;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .my-button {
+        display: none;
+        padding-left:20px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile {
+        padding-top: 0px !important;
+        margin-top: 4.5rem !important;
+    }
+
+    .nonpadding {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+    .logo {
+        height:40px !important;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .my-button {
+        display: none;
+padding-left:20px;
+    }
+
+}
+
+@media only screen and (max-width: 762px) {
+    .mobile {
+        padding-top: 0px !important;
+        margin-top: 4.5rem !important;
+    }
+
+    .nonpadding {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+    .logo {
+        height:40px !important;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .my-button {
+        display: none;
+padding-left:20px;
+    }
+
+
+}
+
+@media only screen and (max-width: 320px) {
+    .mobile {
+        padding-top: 0px !important;
+        margin-top: 4.5rem !important;
+    }
+
+    .nonpadding {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+    .logo {
+        height:40px !important;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .my-button {
+        display: none;
+padding-left:20px;
+    }
+
+
+}
+
+@media only screen and (max-width: 375px) {
+    .mobile {
+        padding-top: 0px !important;
+        margin-top: 4.5rem !important;
+    }
+
+    .nonpadding {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+    .logo {
+        height:40px !important;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .my-button {
+        display: none;
+padding-left:20px;
+    }
+
+}

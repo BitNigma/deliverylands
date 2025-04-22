@@ -1,0 +1,75 @@
+package content
+
+templ Signup(err string){
+
+
+  <!-- ========== MAIN ========== -->
+  <main id="content" role="main">
+    <!-- Login Form -->
+    <div class="container space-2 space-lg-3">
+      <form class="w-md-75 w-lg-50 mx-md-auto" action="/signup" method="post">
+        <!-- Title -->
+        <div class="mb-5 mb-md-7">
+          <h1 class="h2 mb-0">Welcome to Paylary</h1>
+          <p>Fill out the form to get started.</p>
+        </div>
+        <!-- End Title -->
+
+        <!-- Form Group -->
+        <div class="js-form-message form-group">
+          <label class="input-label" for="signupEmail">Email address</label>
+          <input type="email" class="form-control" name="email" id="signinSrEmail" placeholder="Email address" aria-label="Email address" required
+                 data-msg="Please enter a valid email address.">
+        </div>
+        <!-- End Form Group -->
+
+        <!-- Form Group -->
+        <div class="form-group">
+          <label class="input-label">Password</label>
+          <input type="password" class="form-control" name="password"  placeholder="********" aria-label="********" required
+                 data-msg="Your password is invalid. Please try again.">
+        </div>
+        <!-- End Form Group -->
+
+        <!-- Form Group -->
+        <div class="form-group">
+          <label class="input-label" >Confirm password</label>
+          <input type="password" class="form-control" name="confirmPassword"  placeholder="********" aria-label="********" required
+                 data-msg="Password does not match the confirm password.">
+        </div>
+        <!-- End Form Group -->
+
+        <!-- Checkbox -->
+        <div class="mb-5">
+          <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+            <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox" required
+                   data-msg="Please accept our Terms and Conditions.">
+            <label class="custom-control-label" for="termsCheckbox">
+              <small>
+                I agree to the
+                <a class="link-underline" href="/terms">Terms and Conditions</a>
+              </small>
+            </label>
+          </div>
+        </div>
+        <!-- End Checkbox -->
+
+        <!-- Button -->
+        <div class="row align-items-center mb-5">
+          <div class="col-sm-6 mb-3 mb-sm-0">
+            <span class="font-size-1 text-muted">Already have an account?</span>
+            <a class="font-size-1 font-weight-bold" href="/login">Sign in</a>
+          </div>
+
+          <div class="col-sm-6 text-sm-right">
+            <button type="submit" class="btn btn-primary transition-3d-hover">Create account</button>
+          </div>
+        </div>
+        <!-- End Button -->
+      </form>
+    </div>
+    <!-- End Login Form -->
+  </main>
+  <!-- ========== END MAIN ========== -->
+
+}
