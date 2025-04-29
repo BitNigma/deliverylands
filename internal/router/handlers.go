@@ -55,7 +55,7 @@ func HandleFraud(c *fiber.Ctx) error {
 	return index.FraudHanle(c).Render(c.UserContext(), c.Response().BodyWriter())
 }
 
-func HandleAPI(c *fiber.Ctx) error {
+func HandleClients(c *fiber.Ctx) error {
 	c.Set("Content-type", "text/html")
 	return index.APIHandle(c).Render(c.UserContext(), c.Response().BodyWriter())
 }
@@ -86,9 +86,8 @@ func HandleMessage(c *fiber.Ctx) error {
 }
 
 func HandleFAQ(c *fiber.Ctx) error {
-	return c.Render("./static/page-faq.html", fiber.Map{
-		"Jonny": "Hello, World!",
-	})
+	c.Set("Content-type", "text/html")
+	return index.FaqPage(c).Render(c.UserContext(), c.Response().BodyWriter())
 }
 
 func HandleWallets(c *fiber.Ctx) error {

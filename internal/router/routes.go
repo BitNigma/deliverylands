@@ -37,8 +37,9 @@ func Setup(app *fiber.App) {
 	app.Get("/payment", HandlePayment)
 	app.Get("/wallet", HandleWallet)
 	app.Get("/payments", HandlePayment)
-	app.Get("/api", HandleAPI)
+	app.Get("/clients", HandleClients)
 	app.Get("/compliance", HandleCompliance)
+	app.Get("/rules", HandleCompliance)
 	app.Get("/exchange", HandleExchange)
 	app.Get("/faq", HandleFAQ)
 	/* Page Not und Management */

@@ -206,3 +206,17 @@ templ HandleDash(){
     </body>
     </html>
 }
+
+templ FaqPage(c *fiber.Ctx){
+
+<html lang="en">
+   <body>
+    @components.Head()
+    @components.Header("b2b", "compl", c)
+    @content.FAQ()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+
+}
