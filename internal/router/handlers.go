@@ -45,6 +45,16 @@ func HandleWallet(c *fiber.Ctx) error {
 	return index.WalletPage(c).Render(c.UserContext(), c.Response().BodyWriter())
 }
 
+func HandleDelivery(c *fiber.Ctx) error {
+	c.Set("Content-type", "text/html")
+	return index.DeliveryPage(c).Render(c.UserContext(), c.Response().BodyWriter())
+}
+
+func HandlePlans(c *fiber.Ctx) error {
+	c.Set("Content-type", "text/html")
+	return index.PlansPage(c).Render(c.UserContext(), c.Response().BodyWriter())
+}
+
 func HandleSecurity(c *fiber.Ctx) error {
 	c.Set("Content-type", "text/html")
 	return index.SecurityHanle(c).Render(c.UserContext(), c.Response().BodyWriter())

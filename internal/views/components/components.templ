@@ -29,18 +29,26 @@ templ Head(){
 <!-- Favicon -->
   <link rel="shortcut icon" href="./static/assets/favicon.ico">
 
- 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- CSS Implementing Plugins -->
   <link rel="stylesheet" href="./static/assets/vendor/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="./static/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css">
+  <link rel="stylesheet" href="./static/assets/css/vendor.min.css">
 
   <!-- CSS Front Template -->
+  <link rel="stylesheet" href="./static/vendor/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./static/assets/css/theme.min.css">
   <link rel="stylesheet" href="./static/assets/css/custom.css">
+  <link rel="stylesheet" href="./static/assets/css/theme.min.css?v=1.0">
+ 
 
+  <link rel="stylesheet" href="./static/assets/vendor/select2/dist/css/select2.min.css">
+  <link rel="stylesheet" href="./static/assets/vendor/quill/dist/quill.snow.css">
+
+  <!-- CSS Front Template -->
+ 
 </head> 
 }
 
@@ -82,7 +90,7 @@ templ Header(category string, url string, c *fiber.Ctx){
 
  
       <ul class="navbar-nav">
-       if url == "wallet" {   
+       if url == "delivery" {   
       <li class="navbar-nav-item">
             <a class={change(status)} href="/delivery">Доставка</a>
      </li>
@@ -92,7 +100,7 @@ templ Header(category string, url string, c *fiber.Ctx){
      </li>
        }
       
-      if url == "exchange" {
+      if url == "plans" {
             <li class="navbar-nav-item">
               <a class={change(status)} href="/plans">Тарифы</a>
             </li>
@@ -179,6 +187,15 @@ templ BottomScripts(){
   <!-- JS Front -->
   <script src="./static/assets/js/theme.min.js"></script>
 
+
+  <script src="./static/assets/vendor/hs-file-attach/dist/hs-file-attach.min.js"></script>
+  <script src="./static/assets/vendor/hs-add-field/dist/hs-add-field.min.js"></script>
+  <script src="./static/assets/vendor/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+  <script src="./static/assets/vendor/select2/dist/js/select2.full.min.js"></script>
+  <script src="./static/assets/vendor/quill/dist/quill.min.js"></script>
+
+
+
   <!-- JS Plugins Init. -->
   <script>
     $(document).on('ready', function () {
@@ -201,13 +218,6 @@ templ BottomScripts(){
       var unfold = new HSUnfold('.js-hs-unfold-invoker').init();
 
 
-      // INITIALIZATION OF SHOW ANIMATIONS
-      // =======================================================
-      $('.js-animation-link').each(function () {
-        var showAnimation = new HSShowAnimation($(this)).init();
-      });
-
-
       // INITIALIZATION OF FORM VALIDATION
       // =======================================================
       $('.js-validate').each(function() {
@@ -221,6 +231,52 @@ templ BottomScripts(){
       });
 
 
+      // INITIALIZATION OF SHOW ANIMATIONS
+      // =======================================================
+      $('.js-animation-link').each(function () {
+        var showAnimation = new HSShowAnimation($(this)).init();
+      });
+
+
+      // INITIALIZATION OF MASKED INPUT
+      // =======================================================
+      $('.js-masked-input').each(function () {
+        var mask = $.HSCore.components.HSMask.init($(this));
+      });
+
+
+      // INITIALIZATION OF FILE ATTACH
+      // =======================================================
+      $('.js-file-attach').each(function () {
+        var customFile = new HSFileAttach($(this)).init();
+      });
+
+
+      // INITIALIZATION OF ADD INPUT FILED
+      // =======================================================
+      $('.js-add-field').each(function () {
+        new HSAddField($(this), {
+          addedField: () => {
+            $('.js-add-field .js-custom-select-dynamic').each(function () {
+              var select2dynamic = $.HSCore.components.HSSelect2.init($(this));
+            });
+          }
+        }).init();
+      });
+
+
+      // INITIALIZATION OF SELECT2
+      // =======================================================
+      $('.js-custom-select').each(function () {
+        var select2 = $.HSCore.components.HSSelect2.init($(this));
+      });
+
+
+      // INITIALIZATION OF QUILLJS EDITOR
+      // =======================================================
+      var quill = $.HSCore.components.HSQuill.init('.js-quill');
+
+
       // INITIALIZATION OF GO TO
       // =======================================================
       $('.js-go-to').each(function () {
@@ -228,6 +284,10 @@ templ BottomScripts(){
       });
     });
   </script>
+
+
+
+
 
   <!-- IE Support -->
   <script>

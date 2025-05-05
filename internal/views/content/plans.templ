@@ -1,0 +1,233 @@
+package content
+
+templ Plans(){
+
+<main id="content" role="main">
+  <!-- Hero Section -->
+  <!-- End Hero Section -->
+  <!--  Section 2-->
+  <!-- end Section 2-->
+  <!--  Section 3-->
+  <div class="container space-2 space-top-lg-3 mobile">
+    <div class="row justify-content-lg-between align-items-lg-center">
+      <div class="col-lg-5 mb-9 mb-lg-0">
+        <div class="mb-5">
+          <h2>Рассчитайте сумму доставки до вашего адреса</h2>
+          <p>Мы оперативно и точно рассчитаем стоимость доставки до нужного места</p>
+          <p>Наш сервис гарантирует сохранность и целостность ваших посылок.</p>
+        </div>
+        <div class="w-md-50 w-lg-80 mb-2"></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="position-relative mx-auto aos-init aos-animate" data-aos="fade-up"><img class="device-iphone-x-frame" src="./static/assets/img/others/plans_page.png" alt="Image Description">
+          <!-- Device Mockup -->
+          <!-- End Device Mockup -->
+          <!-- SVG Component -->
+          <div class="position-absolute bottom-0 right-0 max-w-50rem w-100 z-index-n1 mx-auto"></div>
+          <!-- End SVG Component -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Features Section -->
+  <div class="container space-2 space-top-lg-3 mobile">
+    <div class="row justify-content-lg-between align-items-lg-center">
+      <div class="col-lg-12">
+        <!-- Card -->
+        <div class="card mb-3 mb-lg-5">
+          <div class="card-header">
+            <h5 class="card-title">Заполните персональные данные отправителя </h5></div>
+          <!-- Body -->
+          <div class="card-body">
+            <form>
+              <!-- Form Group -->
+              <div class="row form-group">
+                <div class="col-sm-9"></div>
+              </div>
+              <!-- End Form Group -->
+              <!-- Form Group -->
+              <div class="row form-group">
+                <label for="firstNameLabel" class="col-sm-3 col-form-label input-label">ФИО<i data-toggle="tooltip" data-placement="top" title="" data-original-title="Displayed on public forums, such as Front."></i></label>
+                <div class="col-sm-9">
+                  <div class="input-group">
+                    <input type="text" class="form-control" name="firstName" id="firstNameLabel" placeholder="Clarice" aria-label="Clarice" value="Иванов">
+                    <input type="text" class="form-control" name="lastName" id="lastNameLabel" placeholder="Boone" aria-label="Boone" value="Иван">
+                  </div>
+                </div>
+              </div>
+              <!-- End Form Group -->
+              <!-- Form Group -->
+              <div class="row form-group">
+                <label for="emailLabel" class="col-sm-3 col-form-label input-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" name="email" id="emailLabel" placeholder="clarice@example.com" aria-label="clarice@example.com" value="ваш@example.com">
+                </div>
+              </div>
+              <!-- End Form Group -->
+              <!-- Form Group -->
+              <div class="js-add-field row form-group" data-hs-add-field-options="{
+                        &quot;template&quot;: &quot;#addPhoneFieldTemplate&quot;,
+                        &quot;container&quot;: &quot;#addPhoneFieldContainer&quot;,
+                        &quot;defaultCreated&quot;: 0
+                      }">
+                <label for="phoneLabel" class="col-sm-3 col-form-label input-label">Телефон</label>
+                <div class="col-sm-9">
+                  <div class="input-group align-items-center">
+                    <input type="text" class="js-masked-input form-control" name="phone" id="phoneLabel" aria-label="+x(xxx)xxx-xx-xx" data-hs-mask-options="{
+                               &quot;template&quot;: &quot;+0(000)000-00-00&quot;
+                             }" maxlength="16" placeholder="+7(905)xxx-xx-xx" value="+7(905)56188111">
+                  
+                  </div>
+                  <!-- Container For Input Field -->
+                  <div id="addPhoneFieldContainer"></div>
+                </div>
+              </div>
+              <!-- End Form Group -->
+              <!-- Add Phone Input Field -->
+              <div id="addPhoneFieldTemplate" style="display: none;">
+                <div class="input-group input-group-add-field">
+                  <input type="text" class="js-masked-input form-control" data-name="additionlPhone" placeholder="+x(xxx)xxx-xx-xx" aria-label="+x(xxx)xxx-xx-xx" data-hs-mask-options="{
+                             &quot;template&quot;: &quot;+0(000)000-00-00&quot;
+                           }" maxlength="16">
+                  <div class="input-group-append">
+                    <!-- Select -->
+                    <select class="js-custom-select-dynamic btn btn-white dropdown-toggle" data-name="additionlPhoneSelect" data-hs-select2-options="{
+                              &quot;minimumResultsForSearch&quot;: &quot;Infinity&quot;,
+                              &quot;customClass&quot;: &quot;custom-select&quot;,
+                              &quot;dropdownAutoWidth&quot;: true,
+                              &quot;width&quot;: true
+                            }">
+                      <option value="Mobile" selected="">Mobile</option>
+                      <option value="Home">Home</option>
+                      <option value="Work">Work</option>
+                      <option value="Fax">Fax</option>
+                      <option value="Direct">Direct</option>
+                    </select>
+                    <!-- End Select -->
+                  </div><a class="js-delete-field input-group-add-field-delete" href="javascript:;"><i class="fas fa-times"></i></a></div>
+              </div>
+              <!-- End Add Phone Input Field -->
+              <!-- Form Group -->
+              <!-- End Form Group -->
+              <!-- Form Group -->
+              <div class="row form-group">
+                <label class="col-sm-3 col-form-label input-label">Дополнительная информация</label>
+                <div class="col-sm-9">
+                  <!-- Quill -->
+                  <div class="quill-custom">
+                    
+                    
+                    <div class="js-quill ql-container ql-snow" style="min-height: 15rem;" data-hs-quill-options="{
+                           &quot;placeholder&quot;: &quot;Type your message...&quot;,
+                            &quot;modules&quot;: {
+                              &quot;toolbar&quot;: [
+                                [&quot;bold&quot;, &quot;italic&quot;, &quot;underline&quot;, &quot;strike&quot;, &quot;link&quot;, &quot;image&quot;, &quot;blockquote&quot;, &quot;code&quot;, {&quot;list&quot;: &quot;bullet&quot;}]
+                              ]
+                            }
+                           }">
+                      <div class="ql-editor" data-gramm="false" contenteditable="true" data-placeholder="Type your message...">
+                        <p>Введите сюда сообщение</p>
+                        <p> </p>
+                      </div>
+                      <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+                      <div class="ql-tooltip ql-hidden">
+                        <a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a>
+                        <input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL">
+                        <a class="ql-action"></a>
+                        <a class="ql-remove"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Quill -->
+                </div>
+              </div>
+              <!-- End Form Group -->
+              <!-- Form Group -->
+              <div class="row align-items-center">
+                <div class="col-sm-9">
+                  <!-- Custom Checkbox -->
+                  <div class="custom-control custom-checkbox"> </div>
+                  <!-- End Custom Checkbox -->
+                </div>
+              </div>
+              <!-- End Form Group -->
+            </form>
+          </div>
+          <!-- End Body -->
+          <!-- Footer -->
+          <!-- End Footer -->
+        </div>
+        <!-- End Card -->
+        <!-- Card -->
+        <div id="editAddressCard" class="card mb-3 mb-lg-5">
+          <div class="card-header">
+            <h5 class="card-title">Адрес</h5></div>
+          <!-- Body -->
+          <div class="card-body">
+            <form>
+              <!-- Form Group -->
+              <div class="row form-group">
+                <label for="locationLabel" class="col-sm-3 col-form-label input-label">Город</label>
+                <div class="col-sm-9">
+                  <!-- Select -->
+                 
+                  <!-- End Select -->
+                  <div class="mb-3">
+                    <input type="text" class="form-control" name="city" id="cityLabel" placeholder="Город" aria-label="Город" value="Москва">
+                  </div>
+                  <input type="text" class="form-control" name="state" id="stateLabel" aria-label="State" placeholder="Округ">
+                </div>
+              </div>
+              <!-- End Form Group -->
+              <!-- Form Group -->
+              <div class="row form-group">
+                <label for="addressLine1Label" class="col-sm-3 col-form-label input-label">Основной адрес</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="addressLine1" id="addressLine1Label" placeholder="Your address" aria-label="Your address" value="45 Roker Terrace, Latheronwheel">
+                </div>
+              </div>
+              <!-- End Form Group -->
+              <!-- Form Group -->
+              <div class="js-add-field row form-group" data-hs-add-field-options="{
+                        &quot;template&quot;: &quot;#addAddressFieldTemplate&quot;,
+                        &quot;container&quot;: &quot;#addAddressFieldContainer&quot;,
+                        &quot;defaultCreated&quot;: 0
+                      }">
+                <label for="addressLine2Label" class="col-sm-3 col-form-label input-label">Дополнительный адрес<span class="input-label-secondary">(Необязательно)</span></label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" name="addressLine2" id="addressLine2Label" aria-label="Your address" placeholder="Введите адрес">
+                  <!-- Container For Input Field -->
+                  <div id="addAddressFieldContainer"></div><a href="javascript:;" class="js-create-field form-link btn btn-xs btn-no-focus btn-ghost-primary"><i class="fas fa-plus mr-1"></i>Добавить еще адрес</a></div>
+              </div>
+              <!-- End Form Group -->
+              <!-- Add Phone Input Field -->
+              <div id="addAddressFieldTemplate" style="display: none;">
+                <div class="input-group-add-field">
+                  <input type="text" class="form-control" data-name="addressLine" placeholder="Your address" aria-label="Your address"> <a class="js-delete-field input-group-add-field-delete" href="javascript:;"><i class="fas fa-times"></i></a></div>
+              </div>
+              <!-- End Add Phone Input Field -->
+              <!-- Form Group -->
+              <div class="row form-group">
+                <label for="zipCodeLabel" class="col-sm-3 col-form-label input-label">Индекс<i data-toggle="tooltip" data-placement="top" title="" data-original-title="You can find your code in a postal address."></i></label>
+                <div class="col-sm-9">
+                  <input type="text" class="js-masked-input form-control" name="zipCode" id="zipCodeLabel" placeholder="Your zip code" aria-label="Your zip code" data-hs-mask-options="{
+                             &quot;template&quot;: &quot;AA0 0AA&quot;
+                           }" maxlength="7" value="108 201">
+                </div>
+              </div>
+              <!-- End Form Group -->
+            </form>
+          </div>
+          <!-- End Body -->
+          <!-- Footer -->
+          <div class="card-footer d-flex justify-content-end"><a class="btn btn-white" href="javascript:;">Отмена</a> <span class="mx-2"></span> <a class="btn btn-primary" href="javascript:;">Рассчитать</a></div>
+          <!-- End Footer -->
+        </div>
+        <!-- End Card -->
+      </div>
+    </div>
+  </div>
+</main>
+
+}
+

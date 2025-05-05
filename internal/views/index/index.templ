@@ -110,6 +110,37 @@ templ WalletPage(c *fiber.Ctx){
     </html>
 }
 
+
+
+templ DeliveryPage(c *fiber.Ctx){
+    <html lang="en">
+
+   <body>
+      @components.Head()
+    @components.Header("b2c", "delivery", c)
+    @content.Delivery()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ PlansPage(c *fiber.Ctx){
+    <html lang="en">
+
+   <body>
+      @components.Head()
+    @components.Header("b2c", "plans", c)
+    @content.Plans()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+
 templ ExchangePage(c *fiber.Ctx){
     <html lang="en">
    <body>
