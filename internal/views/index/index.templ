@@ -125,6 +125,33 @@ templ DeliveryPage(c *fiber.Ctx){
     </html>
 }
 
+templ DeliveryInternet(c *fiber.Ctx){
+    <html lang="en">
+
+   <body>
+    @components.Head()
+    @components.Header("b2c", "internet", c)
+    @content.Internet()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
+
+templ DeliveryDocs(c *fiber.Ctx){
+    <html lang="en">
+
+   <body>
+    @components.Head()
+    @components.Header("b2c", "docs", c)
+    @content.Docs()
+    @components.Footer()
+    @components.BottomScripts()
+    </body>
+    </html>
+}
+
 
 templ PlansPage(c *fiber.Ctx){
     <html lang="en">

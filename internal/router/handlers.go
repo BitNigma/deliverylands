@@ -50,6 +50,16 @@ func HandleDelivery(c *fiber.Ctx) error {
 	return index.DeliveryPage(c).Render(c.UserContext(), c.Response().BodyWriter())
 }
 
+func HandleInternet(c *fiber.Ctx) error {
+	c.Set("Content-type", "text/html")
+	return index.DeliveryInternet(c).Render(c.UserContext(), c.Response().BodyWriter())
+}
+
+func HandleDocs(c *fiber.Ctx) error {
+	c.Set("Content-type", "text/html")
+	return index.DeliveryDocs(c).Render(c.UserContext(), c.Response().BodyWriter())
+}
+
 func HandlePlans(c *fiber.Ctx) error {
 	c.Set("Content-type", "text/html")
 	return index.PlansPage(c).Render(c.UserContext(), c.Response().BodyWriter())
